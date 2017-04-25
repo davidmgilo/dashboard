@@ -23,6 +23,7 @@ class Activity extends Model
         return $this->morphTo();
     }
 
+
     /**
      * Fetch an activity feed for the given user.
      *
