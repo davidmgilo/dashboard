@@ -24878,7 +24878,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   methods: {
     increase: function increase() {
-      console.log('Increase being executed!');
+      console.log('Increase being executed!' + this.name);
       axios.get('/create/random/' + this.name).then(function (response) {
         console.log(response.data);
       }).catch(function (error) {
@@ -24939,7 +24939,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     console.log('Component smallbox mounted.');
     console.log(this.eventName());
     this.$echo.channel('dashboard').listen(this.eventName(), function (payload) {
-      console.log('Event received!!!!!!!!!');
+      console.log('Event received!!!!!!!!!' + _this.eventName());
       console.log(payload);
       _this.value++;
     });

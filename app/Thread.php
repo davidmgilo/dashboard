@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Events\ThreadCreated;
 use App\Filters\ThreadFilters;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -23,6 +24,15 @@ class Thread extends Model
      * @var array
      */
     protected $with = ['creator', 'channel'];
+
+    /**
+     * The event map for the model.
+     *
+     * @var array
+     */
+    protected $events = [
+        'created' => ThreadCreated::class
+    ];
 
     /**
      * Boot the model.
