@@ -24,4 +24,10 @@ Route::group(['middleware' => 'auth'], function () {
     #adminlte_routes
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
+    Route::get('tasks', 'DashboardController@tasks')->name('tasks');
+
+    Route::get('dashboard/tasks/number', 'DashboardController@tasksNumber')->name('tasks-number');
+
+    Route::get('create/random/task', 'DashboardController@createRandomTask')->name('createRandomTask');
+
 });

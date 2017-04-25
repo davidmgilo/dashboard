@@ -32,6 +32,14 @@ $factory->define(App\Task::class, function ($faker) {
     ];
 });
 
+$factory->state(App\Task::class, 'user', function ($faker) {
+    return [
+        'user_id' => function () {
+            return factory('App\User')->create()->id;
+        }
+    ];
+});
+
 $factory->define(App\Thread::class, function ($faker) {
     return [
         'user_id' => function () {
