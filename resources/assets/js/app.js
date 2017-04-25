@@ -17,7 +17,7 @@ import VueEcho from 'vue-echo';
 
 Vue.use(VueEcho, {
   broadcaster: 'pusher',
-  key: '06d5f8319089048cd234',
+  key: 'f59e47e6baa10c0a0cf2',
   cluster: 'eu',
   encrypted: true
 });

@@ -20,6 +20,7 @@ class DashboardController extends Controller
 
     public function tasks()
     {
+        //Cache
         return Task::all();
     }
 
@@ -27,6 +28,8 @@ class DashboardController extends Controller
     {
         return Task::all()->count();
     }
+
+    // pubf threadsNumber, etc
 
     public function createRandomTask()
     {

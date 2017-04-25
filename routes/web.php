@@ -28,6 +28,11 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('dashboard/tasks/number', 'DashboardController@tasksNumber')->name('tasks-number');
 
+    //route dashboard/{model}/number
+
     Route::get('create/random/task', 'DashboardController@createRandomTask')->name('createRandomTask');
+
+//    Route::get('create/random/thread', 'DashboardController@createRandomTask')->name('createRandomTask'); ETC
+    // route create/random/{model}
 
 });
