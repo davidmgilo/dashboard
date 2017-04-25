@@ -2,10 +2,21 @@
 
 namespace App;
 
+use App\Events\TaskCreated;
 use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
+
+    /**
+     * The event map for the model.
+     *
+     * @var array
+     */
+    protected $events = [
+        'created' => TaskCreated::class
+    ];
+
     /**
      * A task belongs to a creator.
      *
