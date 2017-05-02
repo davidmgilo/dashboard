@@ -82894,16 +82894,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['labels', 'values'],
     mounted: function mounted() {
         console.log('Component mounted.');
         var data = {
-            labels: ['Gener', 'Febrer', 'Març'],
+            labels: this.labels,
             datasets: [{
-                label: 'Samarretes',
-                data: [25, 50, 5]
-            }, {
-                label: 'Calçotets',
-                data: [50, 85, 43]
+                data: this.values
             }]
         };
 

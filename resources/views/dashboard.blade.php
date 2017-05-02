@@ -226,10 +226,25 @@
 		</div>
 
         <div class="row">
-            <div class="col-lg-12">
-                <graph></graph>
+            <div class="col-lg-6">
+                <graph
+                        :labels="['Gener', 'Febrer','Març']"
+                        :values="[25,50,5]"
+                ></graph>
             </div>
+            {{--<div class="col-lg-6">--}}
+                {{--<graph></graph>--}}
+            {{--</div>--}}
         </div>
+
+        {{--<div class="row">--}}
+            {{--<div class="col-lg-3">--}}
+                {{--<graph></graph>--}}
+            {{--</div>--}}
+            {{--<div class="col-lg-9">--}}
+                {{--<graph></graph>--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
 
         <div class="row">

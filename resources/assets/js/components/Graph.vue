@@ -5,18 +5,14 @@
 <script>
     import Chart from 'chart.js'
     export default {
+        props: ['labels','values'],
         mounted() {
             console.log('Component mounted.')
             var data = {
-             labels: ['Gener', 'Febrer','Març'],
+             labels: this.labels,
              datasets: [
                  {
-                     label: 'Samarretes',
-                     data: [25,50,5]
-                 },
-                 {
-                     label: 'Calçotets',
-                     data: [50,85,43]
+                     data: this.values
                  }
              ]
             }
