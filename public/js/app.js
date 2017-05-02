@@ -82891,7 +82891,11 @@ $(document).ready(function () {
     var data = {
         labels: ['Gener', 'Febrer', 'Març'],
         datasets: [{
+            label: 'Samarretes',
             data: [25, 50, 5]
+        }, {
+            label: 'Calçotets',
+            data: [50, 85, 43]
         }]
     };
 
