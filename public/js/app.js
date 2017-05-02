@@ -38970,7 +38970,7 @@ window.Vue = __webpack_require__(8);
 
 
 
-__webpack_require__(249);
+// require('./chartjsdemo.js')
 
 window.Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue2_filters___default.a);
 
@@ -40566,7 +40566,6 @@ __webpack_require__(11);
 __webpack_require__(138);
 window.toastr = __webpack_require__(223);
 __webpack_require__(216);
-__webpack_require__(165);
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -40602,6 +40601,7 @@ Vue.component('reset-password-form', __webpack_require__(230));
 
 Vue.component('dashboard-small-box', __webpack_require__(232));
 Vue.component('dashboard-increase-button', __webpack_require__(231));
+Vue.component('graph', __webpack_require__(251));
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
@@ -82879,33 +82879,95 @@ module.exports = __webpack_require__(136);
 
 
 /***/ }),
-/* 249 */
-/***/ (function(module, exports) {
+/* 249 */,
+/* 250 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// new Chart(context).Line(data)
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_chart_js__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_chart_js__);
+//
+//
+//
+//
 
-//Total ventes per mes
 
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        console.log('Component mounted.');
+        var data = {
+            labels: ['Gener', 'Febrer', 'Març'],
+            datasets: [{
+                label: 'Samarretes',
+                data: [25, 50, 5]
+            }, {
+                label: 'Calçotets',
+                data: [50, 85, 43]
+            }]
+        };
 
-$(document).ready(function () {
-    var data = {
-        labels: ['Gener', 'Febrer', 'Març'],
-        datasets: [{
-            label: 'Samarretes',
-            data: [25, 50, 5]
-        }, {
-            label: 'Calçotets',
-            data: [50, 85, 43]
-        }]
-    };
+        var context = document.querySelector('#graph').getContext('2d');
 
-    var context = document.querySelector('#graph').getContext('2d');
-
-    new Chart(context, {
-        type: "line",
-        data: data
-    });
+        new __WEBPACK_IMPORTED_MODULE_0_chart_js___default.a(context, {
+            type: "bar",
+            data: data
+        });
+    }
 });
+
+/***/ }),
+/* 251 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(2)(
+  /* script */
+  __webpack_require__(250),
+  /* template */
+  __webpack_require__(252),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/home/alumne/Code/dashboard/resources/assets/js/components/Graph.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Graph.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-c49b2f7c", Component.options)
+  } else {
+    hotAPI.reload("data-v-c49b2f7c", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 252 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('canvas', {
+    attrs: {
+      "id": "graph"
+    }
+  })
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-c49b2f7c", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

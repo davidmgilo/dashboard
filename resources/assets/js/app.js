@@ -11,7 +11,7 @@ window.Vue = require('vue');
 
 import Vue2Filters from 'vue2-filters'
 
-require('./chartjsdemo.js')
+// require('./chartjsdemo.js')
 
 window.Vue.use(Vue2Filters)
 

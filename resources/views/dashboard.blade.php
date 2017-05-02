@@ -227,7 +227,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <canvas id="graph"></canvas>
+                <graph></graph>
             </div>
         </div>
 

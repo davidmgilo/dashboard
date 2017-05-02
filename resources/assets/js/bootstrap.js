@@ -15,7 +15,6 @@ require('bootstrap-less')
 require('admin-lte')
 window.toastr = require('toastr')
 require('icheck')
-require('chart.js')
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -51,6 +50,7 @@ Vue.component('reset-password-form', require('./components/auth/ResetPasswordFor
 
 Vue.component('dashboard-small-box', require('./components/dashboard/SmallBox.vue'))
 Vue.component('dashboard-increase-button', require('./components/dashboard/IncreaseButton.vue'))
+Vue.component('graph', require('./components/Graph.vue'))
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
