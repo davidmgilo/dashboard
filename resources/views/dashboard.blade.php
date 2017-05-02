@@ -226,7 +226,9 @@
 		</div>
 
         <div class="row">
-            <div class="col-lg-12">PROVA</div>
+            <div class="col-lg-12">
+                <canvas id="graph"></canvas>
+            </div>
         </div>
 
 

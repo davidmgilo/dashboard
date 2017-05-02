@@ -38970,6 +38970,8 @@ window.Vue = __webpack_require__(8);
 
 
 
+__webpack_require__(249);
+
 window.Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue2_filters___default.a);
 
 
@@ -82875,6 +82877,31 @@ module.exports = function() {
 
 module.exports = __webpack_require__(136);
 
+
+/***/ }),
+/* 249 */
+/***/ (function(module, exports) {
+
+// new Chart(context).Line(data)
+
+//Total ventes per mes
+
+
+$(document).ready(function () {
+    var data = {
+        labels: ['Gener', 'Febrer', 'Març'],
+        datasets: [{
+            data: [25, 50, 5]
+        }]
+    };
+
+    var context = document.querySelector('#graph').getContext('2d');
+
+    new Chart(context, {
+        type: "line",
+        data: data
+    });
+});
 
 /***/ })
 /******/ ]);
