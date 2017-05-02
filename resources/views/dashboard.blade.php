@@ -228,8 +228,8 @@
         <div class="row">
             <div class="col-lg-6">
                 <graph
-                        :labels="['Gener', 'Febrer','Març']"
-                        :values="[25,50,5]"
+                        :labels="{{$labels1}}"
+                        :values="{{$values1}}"
                 ></graph>
             </div>
             <div class="col-lg-6">

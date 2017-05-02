@@ -1,6 +1,6 @@
 <template>
     <div>
-        <canvas></canvas>
+        <canvas ref="canvas"></canvas>
         <div v-html="legend"></div>
     </div>
 </template>
@@ -16,7 +16,7 @@
         props: ['labels','values'],
         mounted() {
             console.log('Component mounted.')
-            var data = {
+            let data = {
              labels: this.labels,
              datasets: [
                  {
@@ -26,7 +26,7 @@
             }
 
             console.log(this)
-            var context = this.$refs.canvas.getContext('2d')
+            let context = this.$refs.canvas.getContext('2d')
 
             let chart = new Chart(context,{
              type: "bar",

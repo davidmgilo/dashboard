@@ -82193,7 +82193,9 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('canvas'), _vm._v(" "), _c('div', {
+  return _c('div', [_c('canvas', {
+    ref: "canvas"
+  }), _vm._v(" "), _c('div', {
     domProps: {
       "innerHTML": _vm._s(_vm.legend)
     }
