@@ -232,9 +232,12 @@
                         :values="[25,50,5]"
                 ></graph>
             </div>
-            {{--<div class="col-lg-6">--}}
-                {{--<graph></graph>--}}
-            {{--</div>--}}
+            <div class="col-lg-6">
+                <graph
+                        :labels="['Gener', 'Febrer','Març']"
+                        :values="[5,5,10]"
+                ></graph>
+            </div>
         </div>
 
         {{--<div class="row">--}}

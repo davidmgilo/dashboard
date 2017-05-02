@@ -82904,7 +82904,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }]
         };
 
-        var context = document.querySelector('#graph').getContext('2d');
+        var context = this.$el.getContext('2d');
 
         new __WEBPACK_IMPORTED_MODULE_0_chart_js___default.a(context, {
             type: "bar",
@@ -82952,11 +82952,7 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('canvas', {
-    attrs: {
-      "id": "graph"
-    }
-  })
+  return _c('canvas')
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

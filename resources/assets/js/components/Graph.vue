@@ -1,5 +1,5 @@
 <template>
-    <canvas id="graph"></canvas>
+    <canvas></canvas>
 </template>
 
 <script>
@@ -17,7 +17,7 @@
              ]
             }
 
-            var context = document.querySelector('#graph').getContext('2d')
+            var context = this.$el.getContext('2d')
 
             new Chart(context,{
              type: "bar",
