@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Activity;
 use App\Task;
 use App\Thread;
 use Cache;
@@ -52,6 +53,11 @@ class DashboardController extends Controller
     public function createRandomThread()
     {
         factory(\App\Thread::class)->create();
+    }
+
+    public function fetchActivityFeed()
+    {
+        return Activity::all();
     }
 
 }

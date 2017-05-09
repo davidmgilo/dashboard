@@ -36,6 +36,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('create/random/thread', 'DashboardController@createRandomThread')->name('createRandomThread');
 
+    Route::get('activity-feed', 'DashboardController@fetchActivityFeed');
 //    Route::get('create/random/thread', 'DashboardController@createRandomTask')->name('createRandomTask'); ETC
     // route create/random/{model}
 

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-
+    use RecordsActivity;
     /**
      * The event map for the model.
      *
