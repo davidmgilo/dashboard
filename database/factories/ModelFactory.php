@@ -26,7 +26,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Task::class, function ($faker) {
     return [
         'name' => $faker->sentence,
-        'description'  => $faker->paragraph,
+        'description'  => $faker->sentence(15),
         'done'  => $faker->boolean,
         'priority'  => $faker->randomDigitNotNull,
     ];
@@ -49,7 +49,7 @@ $factory->define(App\Thread::class, function ($faker) {
             return factory('App\Channel')->create()->id;
         },
         'title' => $faker->sentence,
-        'body'  => $faker->paragraph
+        'body'  => $faker->sentence(15)
     ];
 });
 
@@ -71,6 +71,6 @@ $factory->define(App\Reply::class, function ($faker) {
         'user_id' => function () {
             return factory('App\User')->create()->id;
         },
-        'body'  => $faker->paragraph
+        'body'  => $faker->sentence(15)
     ];
 });
